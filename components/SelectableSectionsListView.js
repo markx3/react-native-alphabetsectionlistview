@@ -233,6 +233,7 @@ export default class SelectableSectionsListView extends Component {
     return (
       <View ref="view" style={[styles.container, this.props.style]}>
         <SectionListNative
+          {...props}
           sections={this.props.data}
           renderSectionHeader={this.renderSectionHeader}
           renderItem={this.renderRow}
