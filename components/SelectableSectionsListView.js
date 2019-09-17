@@ -4,7 +4,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactNative, {
-  ListView,
   StyleSheet,
   View,
   NativeModules,
@@ -233,11 +232,9 @@ export default class SelectableSectionsListView extends Component {
     return (
       <View ref="view" style={[styles.container, this.props.style]}>
         <SectionListNative
-          ref="listview"
           sections={this.props.data}
           renderSectionHeader={this.renderSectionHeader}
           renderItem={this.renderRow}
-          {...props}
           keyExtractor={(item, index) => index}
           ListFooterComponent={renderFooter}
         />
