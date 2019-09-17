@@ -11,7 +11,7 @@ import ReactNative, {
 
 const { UIManager } = NativeModules;
 
-const noop = () => {};
+const noop = () => { };
 const returnTrue = () => true;
 
 export default class SectionList extends Component {
@@ -52,7 +52,7 @@ export default class SectionList extends Component {
     //  }
     //});
     //UIManager.findSubviewIn(e.target, rect, viewTag => {
-      //this.onSectionSelect(view, true);
+    //this.onSectionSelect(view, true);
     //})
     const targetY = ev.pageY;
     const { y, width, height } = this.measure;
@@ -61,7 +61,9 @@ export default class SectionList extends Component {
       return;
     }
 
-    if (this.lastSelectedIndex !== index && this.props.data[this.props.sections[index]].length) {
+
+
+    if (this.lastSelectedIndex !== index && this.props.data[index].data.length) {
       this.lastSelectedIndex = index;
       this.onSectionSelect(this.props.sections[index], true);
     }
@@ -99,14 +101,11 @@ export default class SectionList extends Component {
 
   render() {
     const SectionComponent = this.props.component;
-    const sections = this.props.sections.map((section, index) => {
-      const title = this.props.getSectionListTitle ?
-        this.props.getSectionListTitle(section) :
-        section;
 
-      const textStyle = this.props.data[section].length ?
-        styles.text :
-        styles.inactivetext;
+    const sections = this.props.sections.map((section, index) => {
+      const title = section.title;
+
+      const textStyle = styles.text
 
       const child = SectionComponent ?
         <SectionComponent
@@ -119,11 +118,11 @@ export default class SectionList extends Component {
         </View>;
 
       //if(index){
-        return (
-          <View key={index} ref={'sectionItem' + index} pointerEvents="none">
-            {child}
-          </View>
-        );
+      return (
+        <View key={index} ref={'sectionItem' + index} pointerEvents="none">
+          {child}
+        </View>
+      );
       //}
       //else{
       //  return (
@@ -193,8 +192,8 @@ const styles = StyleSheet.create({
   container: {
     position: 'absolute',
     backgroundColor: 'transparent',
-    alignItems:'flex-end',
-    justifyContent:'flex-start',
+    alignItems: 'flex-end',
+    justifyContent: 'flex-start',
     right: 5,
     top: 0,
     bottom: 0
