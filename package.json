@@ -1,16 +1,16 @@
 {
-  "name": "react-native-alphabetlistview",
-  "version": "0.3.0",
-  "description": "A Listview with a sidebar to jump to sections directly, based on johanneslumpe's react-native-selectablesectionlistview",
+  "name": "react-native-alphabetsectionlistview",
+  "version": "0.0.1",
+  "description": "A Listview with a sidebar to jump to sections directly, based on i6mi6's react-native-alphabetlistview, special thanks to VittoriDavide.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sunnylqm/react-native-alphabetlistview.git"
+    "url": "https://github.com/markx3/react-native-alphabetsectionlistview"
   },
-  "author": "Johannes Lumpe <johannes@lum.pe> (https://github.com/johanneslumpe), sunnylqm <sunnylqm@qq.com> (https://github.com/sunnylqm), Kenton Jacobsen (https://github.com/brokentone)",
+  "author": "Marcos Felipe Eipper <marcos@eipper.com.br> (https://github.com/markx3), VittoriDavide <s225105@studenti.polito.it> (https://github.com/VittoriDavide), Kenton Jacobsen (https://github.com/brokentone), Carlos Eduardo Cuzik <cuzikjack@gmail.com> (https://github.com/cuzik)>",
   "license": "MIT",
   "keywords": [
     "react-component",
